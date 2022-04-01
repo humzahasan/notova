@@ -1,0 +1,44 @@
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.homepage-left {
+  display: grid;
+  height: 100vh;
+}
+.homepage-left-text {
+  width: 50%;
+}
+
+h1 {
+  color: rgba(252, 127, 25, 0.631);
+}
+
+h2,
+p {
+  margin: 2rem;
+}
+
+.homepage-left-action {
+  justify-self: center;
+}
+
+.btn {
+  padding: 1rem 4rem 1rem 4rem;
+  font-size: 1.5rem;
+}
+
+.cta-text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.homepage-right {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
