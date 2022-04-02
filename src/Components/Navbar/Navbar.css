@@ -1,0 +1,27 @@
+.navbar {
+  justify-content: space-between;
+  color: white;
+  box-shadow: 1px 1px 10px gray;
+  padding: 8px;
+}
+
+.nav-logo {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.theme-icon-container {
+  padding: 8px;
+  margin-right: 1rem;
+  border: 1px solid var(--light-color);
+  border-radius: 50%;
+}
+
+.theme-icon {
+  font-size: 2.5rem;
+}
+
+.light-icon,
+.dark-icon {
+  color: var(--secondary-color);
+}
