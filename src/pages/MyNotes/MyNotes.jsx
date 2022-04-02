@@ -2,8 +2,6 @@ import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import "./MyNotes.css";
-import MyNotesContent from "./MyNotesContent/MyNotesContent";
-
 const MyNotes = () => {
   return (
     <>
@@ -13,9 +11,7 @@ const MyNotes = () => {
           <div className="grid-item">
             <Sidebar />
           </div>
-          <div className="grid-item">
-            <MyNotesContent />
-          </div>
+          <div className="grid-item"></div>
         </div>
       </section>
     </>

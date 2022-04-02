@@ -20,7 +20,9 @@ const Sidebar = () => {
         <Link to="/profile" className="list-item">
           Profile
         </Link>
-        <button className="btn btn-primary btn-create">Create New Note</button>
+        <Link to="/create-note" className="btn btn-primary btn-create">
+          Create New Note
+        </Link>
       </section>
       <section className="sidebar-account">
         <p className="avatar-letter avatar-letter-sm">SB</p>
