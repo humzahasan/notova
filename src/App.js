@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { useTheme } from "./context/theme-context";
+import Editor from "./pages/Editor/Editor";
 import Homepage from "./pages/Homepage/Homepage";
 import MyNotes from "./pages/MyNotes/MyNotes";
 
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/mynotes" element={<MyNotes />} />
+        <Route path="/create-note" element={<Editor />} />
       </Routes>
     </div>
   );
