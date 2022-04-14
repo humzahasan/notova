@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const { lightTheme, toggleTheme } = useTheme();
-  console.log(lightTheme);
+
   return (
     <section className="navbar">
       <Link to="/" className="nav-logo lg-title">
