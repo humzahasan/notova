@@ -64,10 +64,8 @@ export const restoreFromArchivesHandler = function (schema, request) {
     );
   }
   const { noteId } = request.params;
-  console.log(noteId, user.archives);
   const restoredNote = user.archives.filter((note) => note.id === noteId)[0];
   user.archives = user.archives.filter((note) => note.id !== noteId);
-  console.log("controller");
   user.notes.push({ ...restoredNote });
   this.db.users.update({ _id: user._id }, user);
   return new Response(200, {}, { archives: user.archives, notes: user.notes });

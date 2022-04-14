@@ -7,7 +7,6 @@ const NoteReducer = (state, action) => {
       return { ...state, notes: action.payload };
 
     case "DELETE_NOTE":
-      console.log(action.payload);
       return { ...state, notes: action.payload };
 
     case "UPDATE_NOTE":
@@ -21,11 +20,9 @@ const NoteReducer = (state, action) => {
       };
 
     case "DELETE_ARCHIVE":
-      console.log(action.payload);
       return { ...state, archives: action.payload };
 
     case "RESTORE_NOTES":
-      console.log(action.payload);
       return {
         ...state,
         notes: action.payload.notes,
