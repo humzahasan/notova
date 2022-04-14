@@ -1,0 +1,44 @@
+.register {
+  height: 80vh;
+  display: grid;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.register-container {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.form-container {
+  padding: 5rem;
+  align-self: center;
+  justify-self: center;
+  background-color: var(--light-color);
+  border-radius: 10px;
+}
+
+.input-label {
+  text-align: left;
+}
+
+.image-container {
+  align-self: center;
+  justify-self: center;
+}
+
+.image-container > img {
+  max-width: 500px;
+}
+
+.action {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.action > button {
+  width: 50%;
+  align-self: center;
+}
