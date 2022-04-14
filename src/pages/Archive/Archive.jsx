@@ -10,8 +10,6 @@ const Archive = () => {
     restoreToNote,
   } = useNote();
 
-  console.log("archive -", archives);
-
   return (
     <>
       <Navbar />

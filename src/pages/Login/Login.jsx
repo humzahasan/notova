@@ -12,14 +12,13 @@ const Login = () => {
   const loginHandler = async () => {
     try {
       const res = await axios.post("/api/auth/login", { email, password });
-      console.log(res);
+
       if (res.status === 200 && res.data.encodedToken) {
         setToken(res.data);
         setUser(res.data.foundUser);
         navigate("/mynotes");
       }
     } catch (error) {
-      console.log(error);
       console.log(error.response);
     }
   };

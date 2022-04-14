@@ -31,7 +31,6 @@ const Deleted = () => {
                     });
                   }}
                   unarchiveHandler={() => {
-                    console.log("undo");
                     dispatch({
                       type: "MOVE_TO_NOTES_FROM_DELETED",
                       payload: { id, title, tag, content, date: new Date() },

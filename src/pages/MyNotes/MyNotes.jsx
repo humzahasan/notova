@@ -16,7 +16,6 @@ const MyNotes = () => {
   const [filterType, setFilterType] = useState("");
   const [sortType, setSortType] = useState("");
   const [mynotes, setMyNotes] = useState();
-  console.log("Notes -", notes);
 
   useEffect(() => {
     filterText.length > 0
@@ -121,7 +120,6 @@ const MyNotes = () => {
                     category={tag}
                     content={content}
                     deleteHandler={() => {
-                      console.log("delete");
                       deleteNote(id);
                     }}
                     editHandler={() => {
