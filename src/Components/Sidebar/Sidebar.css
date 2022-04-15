@@ -1,5 +1,4 @@
 .sidebar-container {
-  width: 50%;
   display: flex;
   flex-direction: column;
   height: 80vh;
@@ -26,4 +25,8 @@
   display: flex;
   /* width: 50%; */
   justify-content: space-between;
+}
+
+.active {
+  border: none;
 }

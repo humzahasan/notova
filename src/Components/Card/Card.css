@@ -1,0 +1,24 @@
+.card-w100 {
+  width: 100%;
+}
+
+.card-action-end {
+  justify-content: end;
+}
+
+.card-action-icon {
+  width: 2rem;
+  margin: 1rem;
+}
+
+.card-action-icon:hover {
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+.card-text > p {
+  margin: 10px;
+}
+
+.twitter-picker {
+  position: absolute !important;
+}
