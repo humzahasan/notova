@@ -4,9 +4,13 @@ import "./Homepage.css";
 import HeroImage from "../../assets/notova-hero-image.svg";
 import Navbar from "../../Components/Navbar/Navbar";
 import { useTheme } from "../../context/theme-context";
+import { useAuth } from "../../context/auth-context";
 
 const Homepage = () => {
   const { lightTheme } = useTheme();
+  const { getUser } = useAuth();
+
+  console.log(getUser());
 
   return (
     <div className={lightTheme ? "app-light" : "app-dark"}>
@@ -23,11 +27,23 @@ const Homepage = () => {
             </p>
           </section>
           <section className=" homepage-left-action">
-            <button className="btn btn-primary btn-homepage">
-              <Link to="/mynotes"> Get Started</Link>
-            </button>
+            {!getUser() ? (
+              <>
+                <Link to="/login" className="btn btn-primary btn-homepage">
+                  Get Started
+                </Link>
 
-            <p className="cta-text">Register</p>
+                <Link to="/register" className="cta-text">
+                  Register
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/mynotes" className="btn btn-primary btn-homepage">
+                  Your Notes
+                </Link>
+              </>
+            )}
           </section>
         </section>
         <section className="homepage-right">
