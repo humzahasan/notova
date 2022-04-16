@@ -13,12 +13,15 @@ import {
   Register,
   WIP,
 } from "./pages";
+import { Navbar } from "./Components";
+import NotFound from "./pages/WorkInProgress/NotFound";
 
 function App() {
   const { lightTheme } = useTheme();
   return (
     <div className={lightTheme ? "app-light" : "app-dark"}>
       <ToastContainer autoClose={1500} position="bottom-right" />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/mynotes" element={<MyNotes />} />
@@ -30,6 +33,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/labels" element={<WIP />} />
         <Route path="/profile" element={<WIP />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

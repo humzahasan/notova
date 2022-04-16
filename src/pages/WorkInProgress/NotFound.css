@@ -1,0 +1,11 @@
+.center-div {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+.center-div > img {
+  margin: 2rem;
+}
