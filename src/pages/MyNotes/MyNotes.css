@@ -1,3 +1,41 @@
 .mynotes-container {
   padding: 4rem;
 }
+
+.mynotes-addons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-filter-text,
+.input-filter-type,
+.input-sort-type {
+  margin: 0;
+  border: none;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.input-sort-type {
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.input-sort-type:focus {
+  outline: none;
+}
+
+.input-filter-text {
+  border-left: 1px solid var(--primary-color);
+}
+
+.mynotes-filter {
+  display: inline-block;
+  padding: 2px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.input-filter-text:focus {
+  outline: 0;
+}
