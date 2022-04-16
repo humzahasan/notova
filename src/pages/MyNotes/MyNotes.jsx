@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Card, Navbar, Sidebar } from "../../Components";
+import { Card, Sidebar } from "../../Components";
 
 import { useNote } from "../../context/note-context";
 import "./MyNotes.css";
@@ -60,7 +60,6 @@ const MyNotes = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Navbar />
       <section className="mynotes-container">
         <div className="grid-col-2 grid-col-3by7">
           <div className="grid-item">
@@ -135,9 +134,7 @@ const MyNotes = () => {
                         color: color,
                       });
                     }}
-                    colorHandler={() => {
-                      console.log("color", cardColor);
-                    }}
+                    colorHandler={() => {}}
                   />
                 )
               )}

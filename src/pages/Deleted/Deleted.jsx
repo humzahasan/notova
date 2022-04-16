@@ -1,6 +1,6 @@
 import { React } from "react";
 import { useNote } from "../../context/note-context";
-import { Card, Navbar, Sidebar } from "../../Components";
+import { Card, Sidebar } from "../../Components";
 
 const Deleted = () => {
   const {
@@ -10,7 +10,6 @@ const Deleted = () => {
 
   return (
     <>
-      <Navbar />
       <section className="mynotes-container">
         <div className="grid-col-2 grid-col-3by7">
           <div className="grid-item">

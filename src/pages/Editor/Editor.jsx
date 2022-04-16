@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MDEditor from "@uiw/react-md-editor";
 import "./Editor.css";
-import { Navbar } from "../../Components";
 import { v4 as uuidv4 } from "uuid";
 import { useNote } from "../../context/note-context";
 import { useParams, useNavigate } from "react-router-dom";
@@ -47,7 +46,6 @@ const Editor = () => {
 
   return (
     <>
-      <Navbar />
       <div className="editor-container">
         <div className="editor-extra">
           <input

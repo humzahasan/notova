@@ -2,7 +2,6 @@ import { React } from "react";
 import { Link } from "react-router-dom";
 import "./Homepage.css";
 import HeroImage from "../../assets/notova-hero-image.svg";
-import Navbar from "../../Components/Navbar/Navbar";
 import { useTheme } from "../../context/theme-context";
 import { useAuth } from "../../context/auth-context";
 
@@ -10,11 +9,8 @@ const Homepage = () => {
   const { lightTheme } = useTheme();
   const { getUser } = useAuth();
 
-  console.log(getUser());
-
   return (
     <div className={lightTheme ? "app-light" : "app-dark"}>
-      <Navbar />
       <div className="homepage-container">
         <section className="homepage-left">
           <section className="homepage-left-text">
@@ -38,11 +34,9 @@ const Homepage = () => {
                 </Link>
               </>
             ) : (
-              <>
-                <Link to="/mynotes" className="btn btn-primary btn-homepage">
-                  Your Notes
-                </Link>
-              </>
+              <Link to="/mynotes" className="btn btn-primary btn-homepage">
+                Your Notes
+              </Link>
             )}
           </section>
         </section>
