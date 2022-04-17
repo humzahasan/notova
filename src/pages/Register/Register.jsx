@@ -4,7 +4,7 @@ import "./Register.css";
 import { useAuth } from "../../context/auth-context";
 import { Link, useNavigate } from "react-router-dom";
 import RegisterPic from "../../assets/register.svg";
-import Navbar from "../../Components/Navbar/Navbar";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { setUser, setToken } = useAuth();
@@ -17,15 +17,14 @@ const Register = () => {
         email,
         password,
       });
-      console.log(res);
+
       if (res.status === 201 && res.data.encodedToken) {
         setToken(res.data);
         setUser(res.data.foundUser);
         navigate("/mynotes");
       }
     } catch (error) {
-      console.log(error);
-      console.log(error.response);
+      toast(error.response);
     }
   };
 
@@ -36,7 +35,6 @@ const Register = () => {
 
   return (
     <>
-      <Navbar />
       <div className="register">
         <p className="lg-title">Register</p>
         <div className="grid-col-2 register-container">

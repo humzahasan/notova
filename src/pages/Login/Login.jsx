@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Navbar } from "../../Components";
 import "./Login.css";
 import { useAuth } from "../../context/auth-context";
 import { Link, useNavigate } from "react-router-dom";
 import LoginPic from "../../assets/register.svg";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { setUser, setToken } = useAuth();
@@ -12,15 +12,13 @@ const Login = () => {
   const loginHandler = async () => {
     try {
       const res = await axios.post("/api/auth/login", { email, password });
-      console.log(res);
       if (res.status === 200 && res.data.encodedToken) {
         setToken(res.data);
         setUser(res.data.foundUser);
         navigate("/mynotes");
       }
     } catch (error) {
-      console.log(error);
-      console.log(error.response);
+      toast(error.response);
     }
   };
 
@@ -29,7 +27,6 @@ const Login = () => {
 
   return (
     <>
-      <Navbar />
       <div className="login">
         <p className="lg-title">Login</p>
         <div className="grid-col-2 login-container">

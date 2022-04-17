@@ -27,7 +27,7 @@ const NoteProvider = ({ children }) => {
         dispatch({ type: "SET_NOTES", payload: res.data.notes });
       }
     } catch (error) {
-      console.log(error.response);
+      toast(error.response);
     }
   };
 
@@ -42,7 +42,7 @@ const NoteProvider = ({ children }) => {
         dispatch({ type: "SET_ARCHIVE", payload: res.data });
       }
     } catch (error) {
-      console.log(error.response);
+      toast(error.response);
     }
   };
 

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Card, Navbar, Sidebar } from "../../Components";
+import { Card, Sidebar } from "../../Components";
 
 import { useNote } from "../../context/note-context";
 import "./MyNotes.css";
@@ -16,7 +16,6 @@ const MyNotes = () => {
   const [filterType, setFilterType] = useState("");
   const [sortType, setSortType] = useState("");
   const [mynotes, setMyNotes] = useState();
-  console.log("Notes -", notes);
 
   useEffect(() => {
     filterText.length > 0
@@ -61,7 +60,6 @@ const MyNotes = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Navbar />
       <section className="mynotes-container">
         <div className="grid-col-2 grid-col-3by7">
           <div className="grid-item">
@@ -121,7 +119,6 @@ const MyNotes = () => {
                     category={tag}
                     content={content}
                     deleteHandler={() => {
-                      console.log("delete");
                       deleteNote(id);
                     }}
                     editHandler={() => {
@@ -137,9 +134,7 @@ const MyNotes = () => {
                         color: color,
                       });
                     }}
-                    colorHandler={() => {
-                      console.log("color", cardColor);
-                    }}
+                    colorHandler={() => {}}
                   />
                 )
               )}
